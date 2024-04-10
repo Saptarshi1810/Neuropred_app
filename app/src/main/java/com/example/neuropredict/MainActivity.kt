@@ -11,12 +11,17 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val tappingGameButton=findViewById<CardView>(R.id.tapping_game_btn)
         val identifyGameButton=findViewById<CardView>(R.id.identify_game_btn)
+        val historyButton = findViewById<CardView>(R.id.history)
         tappingGameButton.setOnClickListener{
             val intent = Intent(this,TappingGameActivity::class.java)
             startActivity(intent)
         }
         identifyGameButton.setOnClickListener{
             val intent = Intent(this,IdentifyGameActivity::class.java)
+            startActivity(intent)
+        }
+        historyButton.setOnClickListener {
+            val intent = Intent(this,HistoryActivity::class.java)
             startActivity(intent)
         }
     }
